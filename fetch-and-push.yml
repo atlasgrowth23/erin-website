@@ -1,0 +1,32 @@
+name: Fetch All Code from Replit and Push to GitHub
+
+on:
+  workflow_dispatch:
+    inputs:
+      replit_url:
+        description: 'Replit project URL'
+        required: true
+        default: 'https://replit.com/@AtlasGrowth/erin-website'
+
+jobs:
+  fetch-and-push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Fetch entire codebase from Replit
+        run: |
+          # Use GitHub token to authenticate and push all code
+          # This is a placeholder, the actual fetch would be done via Replit API
+          echo "Fetching code from Replit and committing all files"
+      
+      - name: Commit and push all files
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+          git add .
+          git commit -m "Add complete codebase from Replit"
+          git push
