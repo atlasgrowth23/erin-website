@@ -1,0 +1,156 @@
+~/workspace$ git add .
+~/workspace$ git commit -m "t"
+On branch main
+nothing to commit, working tree clean
+~/workspace$ git push origin main 
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+~/workspace$ git init
+error: could not lock config file /home/runner/workspace/.git/config: File exists
+fatal: could not set 'core.repositoryformatversion' to '0'
+~/workspace$ rm -rf .git
+~/workspace$ git init
+Initialized empty Git repository in /home/runner/workspace/.git/
+~/workspace$ git remote add origin https://${GITHUB_TOKEN}@github.com/atlasgrowth23/erin-website.git
+~/workspace$ git add .
+~/workspace$ git commit -m "Initial commit"
+[main (root-commit) 5b3e221] Initial commit
+ 94 files changed, 16629 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 .replit
+ create mode 100644 DOWNLOAD.md
+ create mode 100644 INSTALL.md
+ create mode 100644 README.md
+ create mode 100644 client/index.html
+ create mode 100644 client/src/App.tsx
+ create mode 100644 client/src/components/contact/ContactForm.tsx
+ create mode 100644 client/src/components/contact/ContactSection.tsx
+ create mode 100644 client/src/components/home/AboutSection.tsx
+ create mode 100644 client/src/components/home/CTASection.tsx
+ create mode 100644 client/src/components/home/HeroSection.tsx
+ create mode 100644 client/src/components/home/ServicesSection.tsx
+ create mode 100644 client/src/components/home/ValueProposition.tsx
+ create mode 100644 client/src/components/layout/Footer.tsx
+ create mode 100644 client/src/components/layout/Header.tsx
+ create mode 100644 client/src/components/ui/accordion.tsx
+ create mode 100644 client/src/components/ui/alert-dialog.tsx
+ create mode 100644 client/src/components/ui/alert.tsx
+ create mode 100644 client/src/components/ui/aspect-ratio.tsx
+ create mode 100644 client/src/components/ui/avatar.tsx
+ create mode 100644 client/src/components/ui/badge.tsx
+ create mode 100644 client/src/components/ui/breadcrumb.tsx
+ create mode 100644 client/src/components/ui/button.tsx
+ create mode 100644 client/src/components/ui/calendar.tsx
+ create mode 100644 client/src/components/ui/card.tsx
+ create mode 100644 client/src/components/ui/carousel.tsx
+ create mode 100644 client/src/components/ui/chart.tsx
+ create mode 100644 client/src/components/ui/checkbox.tsx
+ create mode 100644 client/src/components/ui/collapsible.tsx
+ create mode 100644 client/src/components/ui/command.tsx
+ create mode 100644 client/src/components/ui/context-menu.tsx
+ create mode 100644 client/src/components/ui/dialog.tsx
+ create mode 100644 client/src/components/ui/drawer.tsx
+ create mode 100644 client/src/components/ui/dropdown-menu.tsx
+ create mode 100644 client/src/components/ui/form.tsx
+ create mode 100644 client/src/components/ui/hover-card.tsx
+ create mode 100644 client/src/components/ui/input-otp.tsx
+ create mode 100644 client/src/components/ui/input.tsx
+ create mode 100644 client/src/components/ui/label.tsx
+ create mode 100644 client/src/components/ui/menubar.tsx
+ create mode 100644 client/src/components/ui/navigation-menu.tsx
+ create mode 100644 client/src/components/ui/pagination.tsx
+ create mode 100644 client/src/components/ui/popover.tsx
+ create mode 100644 client/src/components/ui/progress.tsx
+ create mode 100644 client/src/components/ui/radio-group.tsx
+ create mode 100644 client/src/components/ui/resizable.tsx
+ create mode 100644 client/src/components/ui/scroll-area.tsx
+ create mode 100644 client/src/components/ui/select.tsx
+ create mode 100644 client/src/components/ui/separator.tsx
+ create mode 100644 client/src/components/ui/sheet.tsx
+ create mode 100644 client/src/components/ui/sidebar.tsx
+ create mode 100644 client/src/components/ui/skeleton.tsx
+ create mode 100644 client/src/components/ui/slider.tsx
+ create mode 100644 client/src/components/ui/switch.tsx
+ create mode 100644 client/src/components/ui/table.tsx
+ create mode 100644 client/src/components/ui/tabs.tsx
+ create mode 100644 client/src/components/ui/textarea.tsx
+ create mode 100644 client/src/components/ui/toast.tsx
+ create mode 100644 client/src/components/ui/toaster.tsx
+ create mode 100644 client/src/components/ui/toggle-group.tsx
+ create mode 100644 client/src/components/ui/toggle.tsx
+ create mode 100644 client/src/components/ui/tooltip.tsx
+ create mode 100644 client/src/hooks/use-mobile.tsx
+ create mode 100644 client/src/hooks/use-toast.ts
+ create mode 100644 client/src/index.css
+ create mode 100644 client/src/lib/queryClient.ts
+ create mode 100644 client/src/lib/utils.ts
+ create mode 100644 client/src/main.tsx
+ create mode 100644 client/src/pages/About.tsx
+ create mode 100644 client/src/pages/Contact.tsx
+ create mode 100644 client/src/pages/Home.tsx
+ create mode 100644 client/src/pages/ServiceDetail.tsx
+ create mode 100644 client/src/pages/Services.tsx
+ create mode 100644 client/src/pages/not-found.tsx
+ create mode 100644 components.json
+ create mode 100644 db/index.ts
+ create mode 100644 db/seed.ts
+ create mode 100644 download-code.md
+ create mode 100644 drizzle.config.ts
+ create mode 100644 fetch-and-push.yml
+ create mode 100644 generated-icon.png
+ create mode 100644 package-lock.json
+ create mode 100644 package.json
+ create mode 100644 postcss.config.js
+ create mode 100644 server/index.ts
+ create mode 100644 server/routes.ts
+ create mode 100644 server/storage.ts
+ create mode 100644 server/vite.ts
+ create mode 100644 shared/schema.ts
+ create mode 100644 tailwind.config.ts
+ create mode 100644 tsconfig.json
+ create mode 100644 vite.config.ts
+ create mode 100644 workflow.yml
+~/workspace$ git push -u origin main
+To https://github.com/atlasgrowth23/erin-website.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/atlasgrowth23/erin-website.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+~/workspace$ git pull
+remote: Enumerating objects: 125, done.
+remote: Counting objects: 100% (125/125), done.
+remote: Compressing objects: 100% (102/102), done.
+remote: Total 125 (delta 39), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (125/125), 29.09 KiB | 4.85 MiB/s, done.
+Resolving deltas: 100% (39/39), done.
+From https://github.com/atlasgrowth23/erin-website
+ * [new branch]      main       -> origin/main
+ * [new tag]         v1.0.0     -> v1.0.0
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+~/workspace$ git add .
+~/workspace$ git commit -m "yo"
+On branch main
+nothing to commit, working tree clean
+~/workspace$ git push origin main 
+To https://github.com/atlasgrowth23/erin-website.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/atlasgrowth23/erin-website.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
