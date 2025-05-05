@@ -16,6 +16,7 @@ export default defineConfig({
         ]
       : []),
   ],
+  base: process.env.GITHUB_PAGES === "true" ? "/erin-website/" : "/", // Adjust this to your repo name
   resolve: {
     alias: {
       "@db": path.resolve(import.meta.dirname, "db"),
